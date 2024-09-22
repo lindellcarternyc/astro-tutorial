@@ -1,0 +1,17 @@
+---
+import Tag from "./Tag.astro"
+const { tags }  = Astro.props as  { tags: string[]};
+---
+
+<div class="tags">
+  {tags.map((tag)=> (
+    <Tag tag={tag}/>
+  ))}
+</div>
+
+<style>
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+  }
+</style>
